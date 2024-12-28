@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* NavBar */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 8px;
+}
+
+.list .item {
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  font-size: 14px;
+}
+
+.item:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 1;
+  color: #e50914;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* content */
+
+.content {
+  padding: 60px 20px;
+  margin-top: -50px;
+  color: gold;
+}
+
+.row {
+  margin-bottom: 40px;
+}
+
+.row h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.posters {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.posters img {
+  width: 200px;
+  height: 230px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.2s;
+  scroll-snap-align: start;
+}
+
+.posters img:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background-color: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f40612;
+}
